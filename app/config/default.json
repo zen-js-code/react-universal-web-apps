@@ -1,0 +1,12 @@
+{
+    "domain": "http://localhost:3000",
+    "port": 6001,
+    "compressionThreshold": 512,
+    "host": "localhost",
+    "staticFolderMount": "/assets",
+    "staticFolders": ["public"],
+    "maxAge": "1d",
+    "development": true,
+    "templateRoot": "templates",
+    "templateLayouts": "templates/layouts"
+}

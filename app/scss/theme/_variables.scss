@@ -1,0 +1,59 @@
+$white:                         #ffffff;
+$night:                         #222222;
+$charcoal:                      #444444;
+$smoke:                         #cccccc;
+$white-smoke:                   #d6d6d6;
+$almost-white:                  #fafafa;
+
+$fire:                          #ff530d;
+$deep-red:                      #930000;
+
+$main-font:                     "Roboto", "Segoe UI", "Arial", sans-serif;
+$heading-font:                  "Montserrat", "Verdana", sans-serif;
+
+$default-bg-color:              $white;
+$default-font-color:            $charcoal;
+$default-container-padding:     1rem;
+
+$heading-sizes:                 3rem, 2.25rem, 1.5rem, 1.3125rem, 1.125rem, 1rem;
+
+$header-height:                 4rem;
+$header-font-color:             $fire;
+$header-bg-color:               $almost-white;
+$header-border-color:           $white-smoke;
+$header-padding:                $default-container-padding;
+$header-logo-color:             $deep-red;
+
+$header-desc-font-size:         0.875rem;
+$header-desc-line-height:       1.375;
+$header-desc-margin:            1rem;
+
+$footer-border-color:           $white-smoke;
+
+$list-border-color:             $white-smoke;
+
+$main-content-padding:          3rem 2rem;
+
+$link-hover-color:              $fire;
+$link-color:                    $deep-red;
+
+$button-bg-color:               $deep-red;
+$button-hover-bg-color:         $fire;
+$button-font-color:             $white;
+$button-shadow:                 2px 2px 3px $smoke;
+$button-subtle-shadow:          1px 1px 1px $smoke;
+
+$section-width:                 70rem;
+
+$section-header-height:         3rem;
+$section-header-margin:         0 auto;
+$section-header-link-width:     6rem;
+
+$section-footer-height:         3rem;
+$section-footer-margin:         0 auto;
+$section-footer-link-width:     6rem;
+
+$section-content-margin:        0 auto;
+
+$amount-font-color:             $fire;
+$date-font-color:               $deep-red;

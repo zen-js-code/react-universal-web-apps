@@ -1,0 +1,51 @@
+.latest-bills {
+}
+
+.compact-bill {
+}
+
+.detailed-bill {
+    
+}
+
+.bill {
+    border-bottom: 1px solid $footer-border-color;
+
+    padding: 1rem 0;
+
+    display: flex;
+
+    .info-container {
+        padding: 0 1rem;
+
+        flex: 1;
+    }
+
+    .icon {
+        flex: 0 0 4rem;
+    }
+
+    .title {
+        color: $date-font-color;
+    }
+
+    .period {
+        font-weight: 700;      
+        display: block;  
+    }
+
+    .amount {
+        font-size: nth($heading-sizes, 1);
+        font-weight: 700;
+        font-family: $heading-font;
+        line-height: 1;
+
+        flex: 0 0 10rem;
+        text-align: right;
+        align-self: center;
+    }
+
+    .link {
+        display: inline-block;
+    }
+}
