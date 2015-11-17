@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "id": "id1", 
+            "vendor": "Power Company", 
+            "vendorId": "power-company",
+            "icon": "/assets/images/power-company.png",
+            "period": "Jul 2015",
+            "periodId": "07-2015",
+            "amount": "23.49"
+        },
+        {
+            "id": "id2", 
+            "vendor": "Gas company", 
+            "vendorId": "gas-company",
+            "icon": "/assets/images/gas-company.png",
+            "period": "Jul 2015",
+            "periodId": "07-2015",
+            "amount": "13.09"
+        },
+        {
+            "id": "id3", 
+            "vendor": "Water Company", 
+            "vendorId": "water-company",
+            "icon": "/assets/images/water-company.png",
+            "period": "Jul 2015",
+            "periodId": "07-2015",
+            "amount": "20.59"
+        },
+        {
+            "id": "id4", 
+            "vendor": "Cabel Provider", 
+            "vendorId": "cable-provider",
+            "icon": "/assets/images/cable-provider.png",
+            "period": "Jul 2015",
+            "periodId": "07-2015",
+            "amount": "51.99"
+        }
+    ]
+}
