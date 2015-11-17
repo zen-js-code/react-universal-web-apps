@@ -1,0 +1,82 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $default-bg-color;
+    height: 100%;
+}
+
+body {
+    font-size: 100%;
+    font-family: $main-font;
+    color: $default-font-color;
+    font-weight: 300;
+    line-height: 1.75;    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    font-weight: 700;
+    line-height: 1;
+
+    margin: 0;
+    padding: 0;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: nth($heading-sizes, $i);
+    }
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    
+    &:hover {
+        color: $link-hover-color;
+    }
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+ul, ol, p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+
+    padding: 0.5rem;
+    min-width: 5rem;
+
+    &.primary {
+        background-color: $button-bg-color;      
+        color: $button-font-color;
+
+        font-size: 1.125rem;
+        font-weight: 700;
+
+        box-shadow: $button-shadow;
+        outline: none;
+
+        &:hover {
+            background-color: $button-hover-bg-color;      
+
+            box-shadow: $button-subtle-shadow;
+        }
+    }
+}
