@@ -14,7 +14,7 @@ and ran using:
 npm start
 ```
 
-You can access the application's server directly under [http://localhost:6001]() or via its *BrowserSync* access server [http://localhost:3000](). *BrowserSync* console is available under [http://localhost:3001]().
+You can access the application's server directly under [http://localhost:6001](http://localhost:6001) or via its *BrowserSync* access server [http://localhost:3000](http://localhost:3000). *BrowserSync* console is available at [http://localhost:3001](http://localhost:3001).
 
 Enjoy.
 
