@@ -1,27 +1,59 @@
 import React from 'react';
-import axios from 'axios';
 
 import List from '../common/List';
 import CompactBill from './CompactBill';
 
+import Actions from '../../actions/Actions';
+
 export default class LatestBills extends React.Component {
-    static get NAME() {
-        return 'LatestBills';
+    static loadAction(params, domain) {
+        return Actions.loadLatestBillsData(params, domain);
     }
 
-    static get contextTypes() {
-        return {
-            data: React.PropTypes.object            
-        };
+    constructor(props) {
+        super(props);
+        this.changeHandler = this.onChange.bind(this);
+        this.state = this.props.store.getAll() || {};
     }
 
-    static requestData(params, domain = '') {
-        return axios.get(`${domain}/api/latest-bills`);
+    componentWillMount() {
+        if (process.browser) {
+            this.props.store.addChangeListener(this.changeHandler);            
+        }
     }
 
-    constructor(props, context) {
-        super(props, context);
-        this.state = context.data[LatestBills.NAME] || {items: []};
+    componentWillUnmount() {
+        this.props.store.removeChangeListener(this.changeHandler);
+    }
+
+    componentDidMount() {
+        Actions.getLatestBillsData(this.props.params);
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        let result = true;
+
+        if (this.state.items && nextState.items) {
+            const oldItems = this.state.items;
+            const newItems = nextState.items;
+
+            if (oldItems.length === newItems.length) {
+                const validList = newItems.filter((item, index) => {
+                    return oldItems[index].id !== item.id;
+                });
+
+                if (validList.length === 0) {
+                    result = false;
+                }
+            }
+        }
+
+        return result;
+    }
+
+    onChange() {
+        const state = this.props.store.getAll();
+        this.setState(state);
     }
 
     render() {
@@ -35,13 +67,5 @@ export default class LatestBills extends React.Component {
                 </section>
             </section>
         );
-    }
-
-    componentDidMount() {
-        this.constructor.requestData().then((response) => {
-            this.setState(response.data);
-        }).catch((err) => {
-            throw new Error(err);
-        });
     }
 }

@@ -1,33 +1,53 @@
 import React from 'react';
-import axios from 'axios';
+
+import {Link} from 'react-router';
+
+import Actions from '../../actions/Actions';
 
 export default class DetailedBill extends React.Component {
-    static get NAME() {
-        return 'DetailedBill';
+    static loadAction(params, domain) {
+        return Actions.loadDetailedBillData(params, domain);
     }
 
     static get contextTypes() {
         return {
-            data: React.PropTypes.object            
+            root: React.PropTypes.string            
         };
     }
 
-    static requestData(params, domain = '') {
-        return axios.get(`${domain}/api/bill/${params.id}`);
+    constructor(props) {
+        super(props);
+        this.changeHandler = this.onChange.bind(this);
+        this.state = this.props.store.getAll() || {};
     }
 
-    constructor(props, context) {
-        super(props, context);
-        this.state = context.data[DetailedBill.NAME] || {};
+    componentWillMount() {
+        if (process.browser) {
+            this.props.store.addChangeListener(this.changeHandler);            
+        }
     }
 
-    render() {
+    componentWillUnmount() {
+        this.props.store.removeChangeListener(this.changeHandler);
+    }
+
+    componentDidMount() {
+        Actions.getDetailedBillData(this.props.params);
+    }
+
+    onChange() {
+        const state = this.props.store.getAll();
+        this.setState(state);
+    }
+
+    render() {        
         const amount = `$${this.state.amount}`;
 
         return (
             <section className="latest-bills">
                 <header className="section-header">
                     <h3 className="title">Bill Details</h3>
+                    <Link className="link" to={this.context.root}>&#171; Home</Link>
                 </header>
                 <section className="section-content">
                     <div className="bill detailed-bill">
@@ -46,13 +66,5 @@ export default class DetailedBill extends React.Component {
                 </section>
             </section>
         );
-    }
-
-    componentDidMount() {
-        this.constructor.requestData(this.props.params).then((response) => {
-            this.setState(response.data);
-        }).catch((err) => {
-            throw new Error(err);
-        });
     }
 }

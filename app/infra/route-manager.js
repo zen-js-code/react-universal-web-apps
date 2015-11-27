@@ -49,11 +49,11 @@ const routeManager = Object.assign({}, baseManager, {
 
     mapComponentsToPromises(components, params) {
         const filteredComponents = components.filter((Component) => {
-            return (typeof Component.requestData === 'function');
+            return (typeof Component.loadAction === 'function');
         });
 
         const promises = filteredComponents.map(function(Component) {
-            return Component.requestData(params, nconf.get('domain'));                  
+            return Component.loadAction(params, nconf.get('domain'));                  
         });
 
         return {promises, components: filteredComponents};
