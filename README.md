@@ -1,8 +1,11 @@
-# React SSR Example Application
+# Naive Universal Application
 
-The application contains several variants, each in its separate branch, progressively demonstrating various paradigms for writing [universal](https://medium.com/@mjackson/universal-javascript-4761051b7ae9) JavaScript with [React](https://facebook.github.io/react/), [React Router](https://github.com/rackt/react-router), [Node](https://nodejs.org/en/) and [Express](http://expressjs.com/).
+> Other variants of the application, along with their short description are linked from
+> [master](https://github.com/zen-js-code/react-universal-web-apps/tree/) branch.
 
-All applications are installed using:
+## Installation & Execution
+
+The application is installed using:
 
 ```
 npm install
@@ -14,9 +17,22 @@ and ran using:
 npm start
 ```
 
-You can access the application's server directly under [http://localhost:6001](http://localhost:6001) or via its *BrowserSync* access server [http://localhost:3000](http://localhost:3000). *BrowserSync* console is available at [http://localhost:3001](http://localhost:3001).
+You can access the application's server directly under http://localhost:6001 or via its BrowserSync access server http://localhost:3000. BrowserSync console is available under http://localhost:3001.
 
-Enjoy.
+## Description
 
-## Simple Application
-The basis for the entire application stack, this application starts (and ends) with client-side React, with no handling of rendering on the server. The data is not retrieved, rather fed via props from the top level route.
+The idea behind this version of the application is to:
+
+1. render HTML on server, based on data necessary
+2. deliver the HTML to the browser
+3. send the data , used to render the HTML, to the browser as well
+4. allow React to resolve the necessary re-renders
+5. profit
+
+**Schematically, it can be shown like this:**
+
+![Application Structure](app-structure.png)
+
+**The most important parts are described in the following diagram:**
+
+![Application Components](simple-ssr-app-structure-1.png)
