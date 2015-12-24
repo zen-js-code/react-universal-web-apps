@@ -23,6 +23,10 @@ You can access the application's server directly under http://localhost:6001 or 
 
 This variant of the application, we are going to make a transformation from our naive Flux-less  application to still (hopefully less) naive Flux-full one.
 
+**Flux architecture, as it applies here:**
+
+![Flux Architecture](flux-architecture.png)
+
 **Schematically, it can be shown like this:**
 
-![Application Components](flux-architecture.png)
+![Application Components](flux-app-structure.png)
