@@ -25,7 +25,4 @@ This incarnation of our application, as are those to follow, uses React and Reac
 
 The most important parts are described in the following diagram:
 
-<figure>
-    ![][simple-app-structure.svg]
-    <figcaption>**Simple App** Structure.</figcaption>
-</figure>
+![](simple-app-structure.svg)
