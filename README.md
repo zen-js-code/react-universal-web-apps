@@ -29,10 +29,6 @@ The idea behind this version of the application is to:
 4. allow React to resolve the necessary re-renders
 5. profit
 
-**Schematically, it can be shown like this:**
-
-![Application Structure](app-structure.png)
-
-**The most important parts are described in the following diagram:**
+**Structurally, it can be shown like this:**
 
 ![Application Components](simple-ssr-app-structure-1.png)
