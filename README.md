@@ -25,8 +25,8 @@ This incarnation of our application, as are those to follow, uses React and Reac
 
 Schematically, it can be shown like this:
 
-![](app-structure.svg)
+![Application Structure](https://raw.githubusercontent.com/zen-js-code/react-universal-web-apps/simple/app-structure.svg)
 
 The most important parts are described in the following diagram:
 
-![](simple-app-structure.svg)
+![Application Components](https://raw.githubusercontent.com/zen-js-code/react-universal-web-apps/simple/simple-app-structure.svg)
