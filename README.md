@@ -1,7 +1,7 @@
 # Naive Universal Application
 
 > Other variants of the application, along with their short description are linked from
-> [master](https://github.com/zen-js-code/react-universal-web-apps/tree/) branch.
+> [master](https://github.com/zen-js-code/react-universal-web-apps/) branch.
 
 ## Installation & Execution
 
