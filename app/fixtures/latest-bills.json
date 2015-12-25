@@ -29,7 +29,7 @@
         },
         {
             "id": "id4", 
-            "vendor": "Cabel Provider", 
+            "vendor": "Cable Provider", 
             "vendorId": "cable-provider",
             "icon": "/assets/images/cable-provider.png",
             "period": "Jul 2015",
