@@ -29,12 +29,12 @@ This application improves on the previous variant by abstracting data propagatio
 
 ### More Complex, But Still Naive, Application
 
-> The application is under [simple+ssr+context+promise](https://github.com/zen-js-code/react-universal-web-apps/tree/simple+ssr+context+promises) branch.
+> The application is under [simple+ssr+context+promises](https://github.com/zen-js-code/react-universal-web-apps/tree/simple+ssr+context+promises) branch.
 
 This application expands the previous by adding another page and delegating data retrieval to static methods on the components themselve (limited to Route components).
 
 ### Flux Universal Application
 
-> The application is under [flux+ssr+context+promise](https://github.com/zen-js-code/react-universal-web-apps/tree/flux+ssr+context+promises) branch.
+> The application is under [flux+ssr+context+promises](https://github.com/zen-js-code/react-universal-web-apps/tree/flux+ssr+context+promises) branch.
 
 This variant of the application makes the transformation from our naive Flux-less application to still (hopefully less) somewhat naive Flux-full one.
